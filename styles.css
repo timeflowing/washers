@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300&display=swap');
+a {text-decoration: none;}
+p {padding:20px;}
+body {
+    padding:0;
+    margin:0;
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-color: #fbb034;
+background-image: linear-gradient(315deg, #fbb034 0%, #ffdd00 74%);
+transition: all 0.35s ease;
+}
+@import url(https://fonts.googleapis.com/css?family=Raleway:200,300,400,500,600);
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'codropsicons';
+	src: url("../fonts/codropsicons/codropsicons.eot");
+	src: url("../fonts/codropsicons/codropsicons.eot?#iefix") format("embedded-opentype"), url("../fonts/codropsicons/codropsicons.woff") format("woff"), url("../fonts/codropsicons/codropsicons.ttf") format("truetype"), url("../fonts/codropsicons/codropsicons.svg#codropsicons") format("svg");
+}
+
+.landing-page {
+    background-image: url("images/hero.jpg");
+    height: 32vh; 
+    background-size: cover;
+    background-position: bottom;
+    text-align: center;
+    
+}
+
+/* SACNITE BUTTON - for navigating*/
+.button.button--sacnite {
+	width: 70px;
+	height: 70px;
+	min-width: 0;
+	padding: 0;
+	color: #fff;
+	-webkit-transition: color 0.3s;
+	transition: color 0.3s;
+}
+.button--scanite.button--round-l {
+	border-radius: 50%;
+}
+.button--sacnite.button--inverted {
+	color: #37474f;
+}
+.button--sacnite::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+	z-index: -1;
+	box-shadow: inset 0 0 0 35px #37474f;
+	-webkit-transform: scale3d(0.9, 0.9, 1);
+	transform: scale3d(0.9, 0.9, 1);
+	-webkit-transition: box-shadow 0.3s, -webkit-transform 0.3;
+	transition: box-shadow 0.3s, transform 0.3s;
+}
+.button--sacnite.button--inverted::before {
+	box-shadow: inset 0 0 0 35px #fff;
+}
+.button--sacnite .button__icon {
+	font-size: 22px;
+	width: 22px;
+}
+.button--sacnite > span {
+	position: absolute;
+	opacity: 0;
+	pointer-events: none;
+}
+.button--sacnite:hover {
+	color: #37474f;
+}
+.button--sacnite.button--inverted:hover {
+	color: #fff;
+}
+.button--sacnite:hover::before {
+	box-shadow: inset 0 0 0 2px #37474f;
+	-webkit-transform: scale3d(1, 1, 1);
+	transform: scale3d(1, 1, 1);
+}
+.button--sacnite.button--inverted:hover::before {
+	box-shadow: inset 0 0 0 2px #fff;
+}
+.hero {
+    padding:200px 0;
+}
+.hero p {
+    margin:0;
+}
+.hero-text{
+    color:white;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-weight: light;
+    
+    
+}
+.hero-text span {
+    text-align: center;
+}
+
+.phone {
+    color:white;
+    position: absolute;
+    right:20px;
+    top:10px;
+}
+
+.popis {
+    margin:200px auto;
+    text-align: center;
+}
+.popis p {
+    margin: 200px 50px;
+    font-weight: bold;
+}
+.popis img {
+    height: 200px;
+}
+
+.products {
+    text-align: center;
+    
+}
+.product {
+    text-align: center;
+    height:250px;
+    width: 100%;
+    display: inline-block;
+    background-size: cover;
+    
+}
+
+h3{
+    
+    color:#FCEC37;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20pt;
+}
+footer {
+    margin-top:100px;
+    width: 100%;
+    padding:150px 0 0;
+    padding:100px 0 0;
+    background-color:#121111;
+    
+    color:white;
+    font-size: 16px;
+    text-align: center;
+}
+
+footer span {
+    padding:4px;
+    display: block;
+}
+
+
+
+.product img {
+    max-width: 100%;
+    height: 300px;
+    
+}
+
+.cardtext {
+    display: none;
+}
+
+.wrap {
+    margin: 100px 0 5px 0;
+}
+
+.phone {
+    display: none;
+}
+
+@media only screen and (min-width:910px) {
+
+    .landing-page {
+        height: 50vh;
+
+    }
+    .hero-text {
+        font-size: 50pt;
+    }
+    .products {
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-row-gap: 1px;
+grid-column-gap: 9px;
+align-content: space-around;
+padding:0 160px ;
+
+    }
+    .phone {
+        display: inline-block;
+    }
+
+    .product {
+        height:80px;
+    } 
+
+    .map {
+        width:500px;
+    }
+    
+    footer {
+        display: flex;
+        justify-content: space-evenly;
+    }
+    .scroll-indicator-controller {
+        display:inline-block !important;
+    }
+}
+
+.map {
+}
+
+
+
+/* Button 8d */
+.btn-8d:after {
+	width: 20%;
+	height: 100%;
+	left: 100%;
+	top: 0;
+	background: #49a7df;
+	-webkit-transform-origin: 0% 0%;
+	-webkit-transform: rotateY(90deg);
+	-moz-transform-origin: 0% 0%;
+	-moz-transform: rotateY(90deg);
+	-ms-transform-origin: 0% 0%;
+	-ms-transform: rotateY(90deg);
+	transform-origin: 0% 0%;
+	transform: rotateY(90deg);
+}
+
+.btn-8d:hover {
+	-webkit-transform: rotateY(-15deg);
+	-moz-transform: rotateY(-15deg);
+	-ms-transform: rotateY(-15deg);
+	transform: rotateY(-15deg);
+}
+
+.btn-8 {
+    display: block;
+    background: #5cbcf6;
+    outline: 1px solid transparent;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+.btn {
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    cursor: pointer;
+    padding: 10px 80px;
+    display: inline-block;
+    margin: 15px 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    border-color: yellow;
+    color: black;
+    background-image: linear-gradient(45deg,yellow 50%, transparent 50%);
+    background-position: 100%;
+    background-size: 400%;
+    
+    transition: background 400ms ease-in-out;
+    
+
+}
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    }
+
+    
+        .btn:hover {
+          background-position: 0;
+          
+        }
+      
+      
+        
+.scroll-indicator-controller {
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -50%);
+  right: 20px;
+  z-index: 0;
+}
+@media (max-width: 1024px) {
+  .scroll-indicator-controller {
+    right: 10px;
+  }
+}
+.scroll-indicator-controller > div {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  border-radius: 50%;
+  border: 2px dashed yellow;
+  background: rgba(0, 0, 0, 0.25);
+  margin: 0 0 10px 0;
+  cursor: pointer;
+  transition: background 0.4s ease;
+  will-change: transition;
+}
+.scroll-indicator-controller > div span {
+  background-color:yellow;
+  position: absolute;
+  right: calc(100% + 8px);
+  white-space: nowrap;
+  top: -11px;
+  font-family: arial, sans-serif;
+  font-size: 16px;
+  line-height: 17px;
+  width: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateX(10px);
+  transition: all 0.4s ease;
+  will-change: transition;
+  color: #464646;
+  font-weight: 600;
+  padding:10px  20px;
+  border-radius:20px;
+}
+.scroll-indicator-controller > div span:after {
+  content: "-----";
+  padding-left: 5px;
+  letter-spacing: -2px;
+  font-family: arial, sans-serif;
+  vertical-align: text-top;
+  font-weight: 400;
+}
+@media (hover: hover) {
+  .scroll-indicator-controller > div:hover span {
+    width: auto;
+    opacity: 1;
+    overflow: visible;
+    transform: translateX(0px);
+  }
+}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .scroll-indicator-controller > div:hover span {
+    width: auto;
+    opacity: 1;
+    overflow: visible;
+    transform: translateX(0px);
+  }
+}
+@media (hover: none) {
+    .scroll-indicator-controller > div span {
+      display: none;
+    }
+}
+.scroll-indicator-controller.indi-mobile > div span {
+  display: none;
+}
+.scroll-indicator-controller > div.active {
+  background: black; 
+  border: 2px dashed yellow;
+}
+@supports (-ms-ime-align:auto) {
+  .scroll-indicator-controller > div span {
+    transition: opacity 0.4s ease;
+  }
+}
+
+
+.scroll-indicator-controller {
+    display: none;
+}
+
+
+
+@media only screen and (min-width:768px) {
+
+    .land {
+        overflow: hidden;
+        height: 100vh;
+    }
+    
+    .remove {
+        font-size: 30pt;
+        color:white;
+        position: absolute;
+        bottom:0;
+        left:calc(55% - 200px);
+        cursor: pointer;
+        
+        
+    }
+}
